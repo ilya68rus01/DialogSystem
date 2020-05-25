@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    test = Test("Hello, World!")
+    test = Test("Hello, фцрвамиашфцвим")
     return test.get_text()
 
 
