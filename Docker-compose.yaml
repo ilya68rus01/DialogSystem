@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  dialog_service:
+    build: ./DialogService/
+
+  flask_service:
+    build: ./FlaskService/
+    depends_on:
+      - dialog_service
+    ports:
+      - 8080:8080
+    restart: always
