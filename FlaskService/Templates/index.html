@@ -1,0 +1,23 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - QA System</title>
+      {% else %}
+      <title>Welcome to TSTU QA</title>
+      {% endif %}
+    </head>
+    <body>
+       <form action="" method="post" novalidate>
+         {{ form.hidden_tag() }}
+            <p>
+                {{ form.question.label }}<br>
+                {{ form.question(size=128) }}
+            </p>
+            <p>
+                {{ form.answer.label }}<br>
+                {{ form.answer(size=128) }}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </body>
+</html>
