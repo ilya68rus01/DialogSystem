@@ -1,9 +1,10 @@
 import sys
-from FlaskService import flask_server
+from FlaskService.flask_server import Server
 
 
 def main():
-    flask_server.start()
+    server = Server()
+    server.start()
 
 
 if __name__ == '__main__':
